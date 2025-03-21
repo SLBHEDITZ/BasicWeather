@@ -1,0 +1,131 @@
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #121212;
+    color: #ffffff;
+    height: 100vh;
+    justify-content: center;
+  }
+  
+  /* Header Outside the Container */
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .header h1 {
+    font-weight: 600;
+    font-size: 1.8em;
+  }
+  
+  .header p {
+    font-weight: 400;
+    font-size: 1em;
+    color: #aaa;
+  }
+  
+  /* Main Container */
+  .container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  #cityInput {
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: none;
+    width: 80%;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    transition: transform 0.2s ease, background-color 0.2s;
+  }
+  
+  #cityInput:hover {
+    transform: scale(1.02);
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Button Styling */
+  button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+  }
+  
+  /* Error Message Slide-in Animation */
+  .error-message {
+    margin-top: 10px;
+    color: #ff6b6b;
+    font-weight: 500;
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .error-message.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Weather Information Fade-in Animation */
+  .weather-info {
+    margin-top: 20px;
+    color: #ffffff;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  
+  .city {
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+  
+  .temp, .description {
+    font-size: 1.1em;
+    margin: 5px 0;
+  }
+  
+  /* Weather Icon Pulse Animation */
+  #icon img {
+    width: 80px;
+    animation: pulse 2s infinite ease-in-out;
+  }
+  
+  /* Keyframes for Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  

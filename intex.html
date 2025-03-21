@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App - SLBH</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header Outside the Container -->
+  <header class="header">
+    <h1>Weather App</h1>
+    <p>by SLBH</p>
+  </header>
+
+  <!-- Weather App Container -->
+  <div class="container">
+    <!-- Weather Info Section -->
+    <div class="weather-info">
+      <h2 class="city">City</h2>
+      <p class="temp">Temperature: <span id="temperature">--</span>°C</p>
+      <p class="description">Weather: <span id="description">--</span></p>
+      <div id="icon"></div>
+    </div>
+
+    <!-- Error Message Display -->
+    <div id="error-message" class="error-message"></div>
+
+    <!-- City Input and Button -->
+    <input type="text" id="cityInput" placeholder="Enter city name">
+    <button onclick="getWeather()">Get Weather</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
